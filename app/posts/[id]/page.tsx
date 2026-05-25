@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from 'next/navigation';
 
 type Post = {
@@ -11,6 +12,23 @@ type PostDetailPageProps = {
         id: string;
     }>;
 };
+
+type PageProps = {
+    params: Promise<{
+        id: string;
+    }>;
+};
+
+export async function generateMetadata({
+    params,
+}: PageProps): Promise<Metadata> {
+    const { id } = await params;
+
+    return {
+        title: `Post ${id}`,
+        description: `Post detail page for ${id}`,
+    };
+}
 
 async function getPost(id: string): Promise<Post | null> {
     if (id === '999') {

@@ -1,20 +1,19 @@
-'use client';
+// app/posts/error.tsx
+
+"use client";
 
 export default function Error({
     error,
-    reset,
+    unstable_retry,
 }: {
-    error: Error;
-    reset: () => void;
+    error: Error & { digest?: string };
+    unstable_retry: () => void;
 }) {
     return (
-        <div className="card">
-            <h1>エラーが発生しました</h1>
+        <div>
+            <h2>エラーが発生しました</h2>
             <p>{error.message}</p>
-
-            <button className="button" type="button" onClick={() => reset()}>
-                再試行
-            </button>
+            <button onClick={() => unstable_retry()}>再試行</button>
         </div>
     );
 }

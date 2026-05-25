@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
+
 type Post = {
     id: number;
     title: string;
+};
+
+export const metadata: Metadata = {
+    title: "About",
+    description: "About page",
 };
 
 async function sleep(ms: number): Promise<void> {
