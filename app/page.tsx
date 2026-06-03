@@ -1,17 +1,28 @@
-import Counter from '@/components/Counter';
+import AlertButton from './components/AlertButton';
+import Counter from './components/Counter';
+import StorageButton from './components/StorageButton';
 
 export default function HomePage() {
   return (
-    <div className="card">
-      <h1>Home</h1>
-      <p>Next.js App Routerの検証用トップページです。</p>
+    <main>
+      <h1>use clientの確認</h1>
 
-      <h2>Client Componentの確認</h2>
-      <p>
-        下のボタンは <code>'use client'</code> を付けたコンポーネントです。
-      </p>
+      <p>このページ自体はServer Componentです。</p>
 
-      <Counter />
-    </div>
+      <section>
+        <h2>useStateを使う例</h2>
+        <Counter />
+      </section>
+
+      <section>
+        <h2>onClickを使う例</h2>
+        <AlertButton />
+      </section>
+
+      <section>
+        <h2>window / localStorageを使う例</h2>
+        <StorageButton />
+      </section>
+    </main>
   );
 }
