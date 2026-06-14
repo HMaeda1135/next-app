@@ -214,3 +214,7 @@ app/api/hello/route.ts -> /api/hello
 
 - Next.js Docs - File-system conventions  
   https://nextjs.org/docs/app/api-reference/file-conventions
+
+## 関連記事
+
+* Zenn: https://zenn.dev/maeda_dev/articles/63f80e1fe84af1
