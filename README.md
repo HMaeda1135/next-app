@@ -211,4 +211,4 @@ Next.js App Routerでは、`app` 配下のコンポーネントは基本的にSe
 
 ## 関連記事
 
-* Qiita: https://qiita.com/hiro92196/items/a04d8079d6c87817e5db
+* Qiita: https://qiita.com/hiro92196/items/50f72b0a0ff0a48ef5ab
